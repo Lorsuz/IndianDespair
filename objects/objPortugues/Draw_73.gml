@@ -1,1 +1,1 @@
-target = fieldVision(500, 100, image_xscale)
+target = fieldVision(200, 100, image_xscale)

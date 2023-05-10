@@ -49,10 +49,14 @@ if(speedX != 0){
 
 
 if(distance_to_object(objArrow) <= 30){
-	if(keyboard_check(ord("C")) and not instance_exists(objArrowMensage)){
+	if(keyboard_check_pressed(ord("C"))){
+		if(instance_exists(objArrowMensage)){
+			instance_destroy(objArrowMensage)
+		}else{
 		var _Tutorial = instance_nearest(x, y, objArrow)
 		var _TutorialText = instance_create_layer(x, y, "TextBoxes", objArrowMensage)
 		_TutorialText.mensage = _Tutorial.mensage
+		}
 	}
 }
 
